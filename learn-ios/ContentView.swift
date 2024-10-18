@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+enum Emoji: String {
+    case 🎧, 🎹, 🎻, 🎤
+}
+
 struct ContentView: View {
+    var selection: Emoji = .🎧
+    
     var body: some View {
-        Text("Hello world!")
+        Text(selection.rawValue)
+            .font(.system(size: 150))
     }
 }
 
